@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/left_margin"
+    android:paddingRight="@dimen/right_margin"
+    tools:context="com.shrinvi.kannadanewsapp.KNAHomeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/kp_button"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onNewsButtonClick"
+            android:layout_marginTop="@dimen/top_margin"
+            android:text="@string/kp_button_label" />
+
+        <Button
+            android:id="@+id/uv_button"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/kp_button"
+            android:layout_marginTop="@dimen/top_margin"
+            android:onClick="onNewsButtonClick"
+            android:text="@string/uv_button_label" />
+        <Button
+            android:id="@+id/pv_button"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/kp_button"
+            android:layout_marginTop="@dimen/top_margin"
+            android:onClick="onNewsButtonClick"
+            android:text="@string/pv_button_label" />
+        <Button
+            android:id="@+id/vv_button"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/kp_button"
+            android:layout_marginTop="@dimen/top_margin"
+            android:onClick="onNewsButtonClick"
+            android:text="@string/vv_button_label" />
+        <Button
+            android:id="@+id/sv_button"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/kp_button"
+            android:layout_marginTop="@dimen/top_margin"
+            android:onClick="onNewsButtonClick"
+            android:text="@string/sv_button_label" />
+        <Button
+            android:id="@+id/sk_button"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/kp_button"
+            android:layout_marginTop="@dimen/top_margin"
+            android:onClick="onNewsButtonClick"
+            android:text="@string/sk_button_label" />
+    </LinearLayout>
+</RelativeLayout>
