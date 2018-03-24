@@ -1,4 +1,4 @@
-package com.shrinvi.kannadanewsapp;
+package com.shrinvi.kannadanewsapp.model;
 
 /**
  * Created by shrinvigroup on 24/03/2018.

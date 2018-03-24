@@ -1,4 +1,4 @@
-package com.shrinvi.kannadanewsapp;
+package com.shrinvi.kannadanewsapp.model;
 
 import android.content.Context;
 import android.content.res.Configuration;

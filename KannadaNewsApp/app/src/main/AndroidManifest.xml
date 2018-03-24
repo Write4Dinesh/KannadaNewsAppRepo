@@ -5,22 +5,22 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <application
-        android:name=".KNAApplication"
+        android:name=".model.KNAApplication"
         android:allowBackup="true"
         android:icon="@mipmap/kannada_news"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/kannada_news"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".KNASplashActivity">
+        <activity android:name=".ui.KNASplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".KNAHomeActivity" />
-        <activity android:name=".KNABrowserActivity"/>
+        <activity android:name=".ui.KNAHomeActivity" />
+        <activity android:name=".ui.KNABrowserActivity"/>
     </application>
 
 </manifest>

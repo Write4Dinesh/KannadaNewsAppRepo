@@ -1,4 +1,4 @@
-package com.shrinvi.kannadanewsapp;
+package com.shrinvi.kannadanewsapp.model;
 
 import android.graphics.Bitmap;
 import android.net.http.SslError;

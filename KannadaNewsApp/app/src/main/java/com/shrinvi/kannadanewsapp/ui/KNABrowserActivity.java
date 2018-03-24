@@ -1,10 +1,13 @@
-package com.shrinvi.kannadanewsapp;
+package com.shrinvi.kannadanewsapp.ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
+
+import com.shrinvi.kannadanewsapp.model.KNAConstants;
+import com.shrinvi.kannadanewsapp.model.KNAWebViewClient;
+import com.shrinvi.kannadanewsapp.R;
 
 public class KNABrowserActivity extends AppCompatActivity {
     private WebView mKNAWebView;
