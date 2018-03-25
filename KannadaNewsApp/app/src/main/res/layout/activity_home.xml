@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,65 +7,193 @@
     android:paddingRight="@dimen/right_margin"
     tools:context="com.shrinvi.kannadanewsapp.ui.KNAHomeActivity">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true">
 
-        <Button
-            android:id="@+id/kp_button"
-            style="@style/Widget.AppCompat.Button.Colored"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="onNewsButtonClick"
-            android:layout_marginTop="@dimen/top_margin"
-            android:text="@string/kp_button_label" />
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/vk_button"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_margin"
+                android:onClick="onNewsButtonClick"
+                android:text="@string/vk_button_label" />
+            <Button
+                android:id="@+id/kp_button"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_margin"
+                android:onClick="onNewsButtonClick"
+                android:text="@string/kp_button_label" />
 
-        <Button
-            android:id="@+id/uv_button"
-            style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/kp_button"
-            android:layout_marginTop="@dimen/top_margin"
-            android:onClick="onNewsButtonClick"
-            android:text="@string/uv_button_label" />
-        <Button
-            android:id="@+id/pv_button"
-            style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/kp_button"
-            android:layout_marginTop="@dimen/top_margin"
-            android:onClick="onNewsButtonClick"
-            android:text="@string/pv_button_label" />
-        <Button
-            android:id="@+id/vv_button"
-            style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/kp_button"
-            android:layout_marginTop="@dimen/top_margin"
-            android:onClick="onNewsButtonClick"
-            android:text="@string/vv_button_label" />
-        <Button
-            android:id="@+id/sv_button"
-            style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/kp_button"
-            android:layout_marginTop="@dimen/top_margin"
-            android:onClick="onNewsButtonClick"
-            android:text="@string/sv_button_label" />
-        <Button
-            android:id="@+id/sk_button"
-            style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/kp_button"
-            android:layout_marginTop="@dimen/top_margin"
-            android:onClick="onNewsButtonClick"
-            android:text="@string/sk_button_label" />
-    </LinearLayout>
+            <Button
+                android:id="@+id/uv_button"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_margin"
+                android:onClick="onNewsButtonClick"
+                android:text="@string/uv_button_label" />
+
+            <Button
+                android:id="@+id/pv_button"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_margin"
+                android:onClick="onNewsButtonClick"
+                android:text="@string/pv_button_label" />
+
+            <Button
+                android:id="@+id/vv_button"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_margin"
+                android:onClick="onNewsButtonClick"
+                android:text="@string/vv_button_label" />
+
+            <Button
+                android:id="@+id/sv_button"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_margin"
+                android:onClick="onNewsButtonClick"
+                android:text="@string/sv_button_label" />
+            <Button
+                android:id="@+id/sk_button"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_margin"
+                android:onClick="onNewsButtonClick"
+                android:text="@string/sk_button_label" />
+
+            <Button
+                android:id="@+id/kk_button"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_margin"
+                android:onClick="onNewsButtonClick"
+                android:text="@string/kk_button_label" />
+
+            <Button
+                android:id="@+id/kr_button"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_margin"
+                android:onClick="onNewsButtonClick"
+                android:text="@string/kr_button_label" />
+
+            <Button
+                android:id="@+id/kd_button"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_margin"
+                android:onClick="onNewsButtonClick"
+                android:text="@string/kd_button_label" />
+
+            <Button
+                android:id="@+id/jm_button"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_margin"
+                android:onClick="onNewsButtonClick"
+                android:text="@string/jm_button_label" />
+
+            <Button
+                android:id="@+id/pp_button"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_margin"
+                android:onClick="onNewsButtonClick"
+                android:text="@string/pp_button_label" />
+
+            <Button
+                android:id="@+id/vb_button"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_margin"
+                android:onClick="onNewsButtonClick"
+                android:text="@string/vb_button_label" />
+
+            <Button
+                android:id="@+id/sn_button"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_margin"
+                android:onClick="onNewsButtonClick"
+                android:text="@string/sn_button_label" />
+
+            <Button
+                android:id="@+id/bn_button"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_margin"
+                android:onClick="onNewsButtonClick"
+                android:text="@string/bn_button_label" />
+
+            <Button
+                android:id="@+id/jv_button"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_margin"
+                android:onClick="onNewsButtonClick"
+                android:text="@string/jv_button_label" />
+
+            <Button
+                android:id="@+id/tc_button"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_margin"
+                android:onClick="onNewsButtonClick"
+                android:text="@string/tc_button_label" />
+            ]
+
+            <Button
+                android:id="@+id/wd_button"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_margin"
+                android:onClick="onNewsButtonClick"
+                android:text="@string/wd_button_label" />
+
+            <Button
+                android:id="@+id/oi_button"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_margin"
+                android:onClick="onNewsButtonClick"
+                android:text="@string/oi_button_label" />
+
+            <Button
+                android:id="@+id/vvn_button"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/top_margin"
+                android:onClick="onNewsButtonClick"
+                android:text="@string/vvn_button_label" />
+        </LinearLayout>
+    </ScrollView>
 </RelativeLayout>

@@ -16,7 +16,6 @@ public class KNABrowserActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_browser);
-
         mKNAWebView = findViewById(R.id.kna_webview);
 
         mKNAWebView.getSettings().setAllowContentAccess(true);
@@ -29,6 +28,10 @@ public class KNABrowserActivity extends AppCompatActivity {
         mKNAWebView.setWebViewClient(new KNAWebViewClient((ProgressBar) findViewById(R.id.progress_spinner)));
 
         String url = getIntent().getStringExtra(KNAConstants.INTENT_EXTRA_URL);
+        String title = getIntent().getStringExtra(KNAConstants.INTENT_EXTRA_TITLE);
+        if (title != null && !title.isEmpty()) {
+            getSupportActionBar().setTitle(title);
+        }
         if (url != null && !url.isEmpty()) {
             mKNAWebView.loadUrl(url);
         }

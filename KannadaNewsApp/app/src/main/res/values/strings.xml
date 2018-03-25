@@ -4,10 +4,23 @@
     <string name="error_not_connected">No Network Connectivity</string>
     <string name="alert_button_label">OK</string>
 
+    <string name="vk_button_label">vijaya Karnatak</string>
     <string name="kp_button_label">Kannada Prabha</string>
     <string name="uv_button_label">Udayavani</string>
     <string name="pv_button_label">praja vani</string>
     <string name="vv_button_label">vijaya vani</string>
     <string name="sk_button_label">samyuktha karnataka</string>
-    <string name="sv_button_label">sanje vani</string>
+    <string name="kk_button_label">Kranti Kannada</string>
+    <string name="kr_button_label">Kannada Rathna</string>
+    <string name="kd_button_label">Kannada Duniya</string>
+    <string name="jm_button_label">Janatha Maadhyama</string>
+    <string name="pp_button_label">Praja Pragathi</string>
+    <string name="vb_button_label">Vartha Bharathi</string>
+    <string name="sn_button_label">Suvarna News</string>
+    <string name="bn_button_label">Balkani News</string>
+    <string name="jv_button_label">Janatha Vani</string>
+    <string name="tc_button_label">Kannada Cricket</string>
+    <string name="wd_button_label">Web Duniya</string>
+    <string name="oi_button_label">One India</string>
+    <string name="vvn_button_label">Vishwa Vani</string>
 </resources>
