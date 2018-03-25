@@ -34,7 +34,7 @@ public class KNASplashActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        KNAGoogleAnalytics.sendEvent("Splash Screen");
+        KNAGoogleAnalytics.sendScrenViewEvent("Splash Screen");
     }
     private void launchHomeScreen() {
         Intent homeIntent = new Intent(this, KNAHomeActivity.class);

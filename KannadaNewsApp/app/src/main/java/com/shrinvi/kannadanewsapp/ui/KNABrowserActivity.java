@@ -1,10 +1,7 @@
 package com.shrinvi.kannadanewsapp.ui;
 
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
 import android.webkit.WebView;
 import android.widget.ProgressBar;
 
@@ -51,6 +48,6 @@ public class KNABrowserActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        KNAGoogleAnalytics.sendEvent("Browser Screen");
+        KNAGoogleAnalytics.sendScrenViewEvent("Browser Screen");
     }
 }

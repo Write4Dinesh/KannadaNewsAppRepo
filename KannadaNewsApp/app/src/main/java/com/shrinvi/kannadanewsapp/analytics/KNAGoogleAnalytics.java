@@ -24,8 +24,15 @@ public class KNAGoogleAnalytics {
         }
     }
 
-    public static void sendEvent(String screenName) {
+    public static void sendScrenViewEvent(String screenName) {
         mTracker.setScreenName(screenName);
         mTracker.send(new HitBuilders.ScreenViewBuilder().build());
+    }
+
+    public static void sendCustomEvent(String eventCategory, String eventName) {
+        mTracker.send(new HitBuilders.EventBuilder()
+                .setCategory(eventCategory)
+                .setAction(eventName)
+                .build());
     }
 }
