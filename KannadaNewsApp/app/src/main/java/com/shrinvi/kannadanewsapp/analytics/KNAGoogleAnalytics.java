@@ -1,0 +1,31 @@
+package com.shrinvi.kannadanewsapp.analytics;
+
+import android.content.Context;
+
+import com.google.android.gms.analytics.GoogleAnalytics;
+import com.google.android.gms.analytics.HitBuilders;
+import com.google.android.gms.analytics.Tracker;
+
+/**
+ * Created by shrinvigroup on 25/03/2018.
+ */
+
+public class KNAGoogleAnalytics {
+    private static final String GA_TRACKER_ID = "UA-116368779-1";
+    private static Tracker mTracker;
+
+
+    synchronized public static void init(Context context) {
+        if (mTracker == null) {
+            GoogleAnalytics analytics = GoogleAnalytics.getInstance(context);
+            mTracker = analytics.newTracker(GA_TRACKER_ID);
+            mTracker.enableExceptionReporting(true);
+            mTracker.enableAutoActivityTracking(true);
+        }
+    }
+
+    public static void sendEvent(String screenName) {
+        mTracker.setScreenName(screenName);
+        mTracker.send(new HitBuilders.ScreenViewBuilder().build());
+    }
+}

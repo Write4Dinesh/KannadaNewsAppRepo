@@ -1,10 +1,14 @@
 package com.shrinvi.kannadanewsapp.ui;
 
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.webkit.WebView;
 import android.widget.ProgressBar;
 
+import com.shrinvi.kannadanewsapp.analytics.KNAGoogleAnalytics;
 import com.shrinvi.kannadanewsapp.model.KNAConstants;
 import com.shrinvi.kannadanewsapp.model.KNAWebViewClient;
 import com.shrinvi.kannadanewsapp.R;
@@ -17,7 +21,6 @@ public class KNABrowserActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_browser);
         mKNAWebView = findViewById(R.id.kna_webview);
-
         mKNAWebView.getSettings().setAllowContentAccess(true);
         mKNAWebView.getSettings().setJavaScriptEnabled(true);
         mKNAWebView.getSettings().setAppCacheEnabled(true);
@@ -44,5 +47,10 @@ public class KNABrowserActivity extends AppCompatActivity {
         } else {
             super.onBackPressed();
         }
+    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        KNAGoogleAnalytics.sendEvent("Browser Screen");
     }
 }

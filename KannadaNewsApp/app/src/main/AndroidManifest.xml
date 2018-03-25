@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/kannada_news"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.KNASplashActivity">
+        <activity android:name=".ui.KNASplashActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

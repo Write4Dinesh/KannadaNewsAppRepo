@@ -2,11 +2,13 @@ package com.shrinvi.kannadanewsapp.ui;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.shrinvi.kannadanewsapp.analytics.KNAGoogleAnalytics;
 import com.shrinvi.kannadanewsapp.model.KNAConstants;
 import com.shrinvi.kannadanewsapp.model.KNAUtils;
 import com.shrinvi.kannadanewsapp.R;
@@ -108,5 +110,11 @@ public class KNAHomeActivity extends AppCompatActivity {
             }
         });
         mAlertDialog.show();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        KNAGoogleAnalytics.sendEvent("Home Screen");
     }
 }
