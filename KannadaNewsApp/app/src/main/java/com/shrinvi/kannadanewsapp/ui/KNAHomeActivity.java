@@ -8,18 +8,23 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.onesignal.OSNotificationOpenResult;
+import com.onesignal.OneSignal;
 import com.shrinvi.kannadanewsapp.analytics.KNAGoogleAnalytics;
 import com.shrinvi.kannadanewsapp.model.DataProvider;
 import com.shrinvi.kannadanewsapp.model.KNAConstants;
 import com.shrinvi.kannadanewsapp.R;
 import com.shrinvi.kannadanewsapp.model.KNANewsPaperAdapter;
 import com.shrinvi.kannadanewsapp.model.KNAUtils;
+
+import org.json.JSONObject;
 
 public class KNAHomeActivity extends AppCompatActivity {
     private AlertDialog mAlertDialog;
