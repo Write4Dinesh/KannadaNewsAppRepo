@@ -7,6 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.shrinvi.kannadanewsapp.analytics.KNAGAEventsData;
 import com.shrinvi.kannadanewsapp.analytics.KNAGoogleAnalytics;
 import com.shrinvi.kannadanewsapp.model.KNAConstants;
@@ -21,6 +23,9 @@ public class KNAHomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         // KNAUtils.configLocale(this);
+        AdView adView = findViewById(R.id.home_adView);
+        AdRequest adRequest = new AdRequest.Builder().addTestDevice(AdRequest.DEVICE_ID_EMULATOR).build();
+        adView.loadAd(adRequest);
     }
 
     public void onNewsButtonClick(View button) {
@@ -116,6 +121,6 @@ public class KNAHomeActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        KNAGoogleAnalytics.sendScrenViewEvent("Home Screen");
+        KNAGoogleAnalytics.sendScreenViewEvent("Home Screen");
     }
 }

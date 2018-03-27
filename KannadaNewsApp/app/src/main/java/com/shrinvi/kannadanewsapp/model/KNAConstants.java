@@ -1,5 +1,7 @@
 package com.shrinvi.kannadanewsapp.model;
 
+import com.google.android.gms.ads.AdRequest;
+
 /**
  * Created by shrinvigroup on 24/03/2018.
  */
@@ -27,4 +29,7 @@ public class KNAConstants {
     public static final String WD_URL = "http://kannada.webdunia.com/";
     public static final String OI_URL = "https://kannada.oneindia.com/";
     public static final String VVN_URL = "https://www.vishwavani.news/";
+
+    //the below device refers emulator. if you want to test on real device, run the app on real device & search for the 'adRequest' in logcat for device id
+    public static final String AD_TEST_DEVICE_ID = AdRequest.DEVICE_ID_EMULATOR;
 }

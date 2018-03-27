@@ -5,6 +5,11 @@ import android.os.Bundle;
 import android.webkit.WebView;
 import android.widget.ProgressBar;
 
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
+import com.shrinvi.kannadanewsapp.AppConfig;
 import com.shrinvi.kannadanewsapp.analytics.KNAGoogleAnalytics;
 import com.shrinvi.kannadanewsapp.model.KNAConstants;
 import com.shrinvi.kannadanewsapp.model.KNAWebViewClient;
@@ -12,6 +17,7 @@ import com.shrinvi.kannadanewsapp.R;
 
 public class KNABrowserActivity extends AppCompatActivity {
     private WebView mKNAWebView;
+    private InterstitialAd interstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +41,22 @@ public class KNABrowserActivity extends AppCompatActivity {
         if (url != null && !url.isEmpty()) {
             mKNAWebView.loadUrl(url);
         }
+        initBannerAd();
+        initInterstitialAd();
+    }
+
+    private void initInterstitialAd() {
+        // Create the InterstitialAd and set the adUnitId.
+        interstitialAd = new InterstitialAd(this);
+        interstitialAd.setAdUnitId(getString(R.string.ad_unit_id_for_browse_interstitial));
+        interstitialAd.setAdListener(new AdListener() {
+            @Override
+            public void onAdClosed() {
+                finish();//close browser activity
+            }
+        });
+        AdRequest adRequest = new AdRequest.Builder().build();
+        interstitialAd.loadAd(adRequest);
     }
 
     @Override
@@ -42,12 +64,36 @@ public class KNABrowserActivity extends AppCompatActivity {
         if (mKNAWebView.canGoBack()) {
             mKNAWebView.goBack();
         } else {
-            super.onBackPressed();
+            //super.onBackPressed();
+            showInterstitialAd();
         }
     }
+
     @Override
     protected void onStart() {
         super.onStart();
-        KNAGoogleAnalytics.sendScrenViewEvent("Browser Screen");
+        KNAGoogleAnalytics.sendScreenViewEvent("Browser Screen");
+    }
+
+    private void initBannerAd() {
+        AdView adView = findViewById(R.id.browser_adView);
+        AdRequest adRequest;
+        if (AppConfig.IS_IN_TEST_MODE) {
+            adRequest = new AdRequest.Builder().addTestDevice(KNAConstants.AD_TEST_DEVICE_ID).build();
+        } else {
+            adRequest = new AdRequest.Builder().build();
+        }
+        adView.loadAd(adRequest);
+    }
+
+    private void showInterstitialAd() {
+        if (interstitialAd != null && interstitialAd.isLoaded()) {
+                KNAGoogleAnalytics.sendCustomEvent("AdMob", "ShowInterstitial");
+            interstitialAd.show();
+        } else {
+            KNAGoogleAnalytics.sendCustomEvent("AdMob","ShowInterstitial:not loaded yet");
+            finish();
+
+        }
     }
 }

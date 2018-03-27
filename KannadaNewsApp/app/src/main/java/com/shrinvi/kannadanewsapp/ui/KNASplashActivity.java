@@ -7,6 +7,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
 
+import com.google.android.gms.ads.MobileAds;
 import com.shrinvi.kannadanewsapp.analytics.KNAGoogleAnalytics;
 import com.shrinvi.kannadanewsapp.model.KNAUtils;
 import com.shrinvi.kannadanewsapp.R;
@@ -29,13 +30,15 @@ public class KNASplashActivity extends AppCompatActivity {
                 launchHomeScreen();
             }
         }, LOAD_ANIMATION_DELAY_IN_MILLIS);
+        MobileAds.initialize(this, "ca-app-pub-3940256099942544~3347511713");
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        KNAGoogleAnalytics.sendScrenViewEvent("Splash Screen");
+        KNAGoogleAnalytics.sendScreenViewEvent("Splash Screen");
     }
+
     private void launchHomeScreen() {
         Intent homeIntent = new Intent(this, KNAHomeActivity.class);
         startActivity(homeIntent);
