@@ -12,6 +12,7 @@ import com.google.android.gms.ads.InterstitialAd;
 import com.shrinvi.kannadanewsapp.AppConfig;
 import com.shrinvi.kannadanewsapp.analytics.KNAGoogleAnalytics;
 import com.shrinvi.kannadanewsapp.model.KNAConstants;
+import com.shrinvi.kannadanewsapp.model.KNAUtils;
 import com.shrinvi.kannadanewsapp.model.KNAWebViewClient;
 import com.shrinvi.kannadanewsapp.R;
 import com.shrinvi.kannadanewsapp.storage.KNADataStore;
@@ -24,6 +25,7 @@ public class KNABrowserActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_browser);
+        KNAUtils.configLocale(this);
         mKNAWebView = findViewById(R.id.kna_webview);
         mKNAWebView.getSettings().setAllowContentAccess(true);
         mKNAWebView.getSettings().setJavaScriptEnabled(true);
@@ -77,12 +79,7 @@ public class KNABrowserActivity extends AppCompatActivity {
 
     private void initBannerAd() {
         AdView adView = findViewById(R.id.browser_adView);
-        AdRequest adRequest;
-        if (AppConfig.IS_IN_TEST_MODE) {
-            adRequest = new AdRequest.Builder().addTestDevice(KNAConstants.AD_TEST_DEVICE_ID).build();
-        } else {
-            adRequest = new AdRequest.Builder().build();
-        }
+        AdRequest adRequest = new AdRequest.Builder().build();
         adView.loadAd(adRequest);
     }
 

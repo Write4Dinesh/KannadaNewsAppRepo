@@ -25,4 +25,41 @@
     <string name="wd_button_label">ವೆಬ್ ದುನಿಯಾ</string>
     <string name="oi_button_label">ಒನ್ ಇಂಡಿಯಾ</string>
     <string name="vvn_button_label">ವಿಶ್ವ ವಾಣಿ</string>
+
+    <string name="vk_url">https://vijaykarnataka.indiatimes.com</string>;
+    <string name="kp_url">http://www.kannadaprabha.com/</string>;
+    <string name="uv_url">https://www.udayavani.com/</string>;
+    <string name="pv_url">http://www.prajavani.net/</string>;
+    <string name="vv_url">http://epapervijayavani.in/</string>;
+    <string name="sv_url">http://sanjevani.com/sanjevani/</string>;
+    <string name="sk_url">http://epaper.samyukthakarnataka.com/</string>;
+    <string name="kk_url">http://krantiindia.com/</string>;
+    <string name="kr_url">http://www.kannadaratna.com/</string>;
+    <string name="kd_url">http://kannadadunia.com/</string>;
+    <string name="jm_url">http://janathamadhyama.epapertoday.com/</string>;
+    <string name="pp_url">http://prajapragathi.epapertoday.com/</string>;
+    <string name="vb_url">http://www.varthabharati.in/</string>;
+    <string name="sn_url">http://kannada.asianetnews.com/</string>;
+    <string name="bn_url">https://www.balkaninews.com/</string>;
+    <string name="jv_url">http://www.janathavani.com/</string>;
+    <string name="tc_url">http://kannada.thatscricket.com/</string>;
+    <string name="wd_url">http://kannada.webdunia.com/</string>;
+    <string name="oi_url">https://kannada.oneindia.com/</string>;
+    <string name="vvn_url">https://www.vishwavani.news/</string>;
+
+    <!--admob related for test-->
+    <string name="test_ad_unit_id_for_home_banner">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="test_ad_unit_id_for_browse_banner">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="test_ad_unit_id_for_browse_interstitial">ca-app-pub-3940256099942544/1033173712</string>
+
+    <!--admob related for prod-->
+    <string name="ad_unit_id_for_home_banner">ca-app-pub-1188356255077818/5224405470</string>
+    <string name="ad_unit_id_for_browse_banner">ca-app-pub-1188356255077818/4251424522</string>
+    <string name="ad_unit_id_for_browse_interstitial">ca-app-pub-1188356255077818/3590284824</string>
+
+    <string name="admob_app_id">ca-app-pub-1188356255077818~4338699212</string>
+
+
+    <string name="about_us">We are a team of freelance Mobile Apps developers based out in Bangalore , India. For Android, iOS Apps development, please write back to us at shrinvigroup@gmail.com</string>
+
 </resources>

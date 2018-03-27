@@ -19,6 +19,7 @@ import com.shrinvi.kannadanewsapp.model.DataProvider;
 import com.shrinvi.kannadanewsapp.model.KNAConstants;
 import com.shrinvi.kannadanewsapp.R;
 import com.shrinvi.kannadanewsapp.model.KNANewsPaperAdapter;
+import com.shrinvi.kannadanewsapp.model.KNAUtils;
 
 public class KNAHomeActivity extends AppCompatActivity {
     private AlertDialog mAlertDialog;
@@ -27,9 +28,9 @@ public class KNAHomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        // KNAUtils.configLocale(this);
+        KNAUtils.configLocale(this);
         AdView adView = findViewById(R.id.home_adView);
-        AdRequest adRequest = new AdRequest.Builder().addTestDevice(KNAConstants.AD_TEST_DEVICE_ID).build();
+        AdRequest adRequest = new AdRequest.Builder().build();
         adView.loadAd(adRequest);
 
         RecyclerView recyclerView = findViewById(R.id.np_recycler);

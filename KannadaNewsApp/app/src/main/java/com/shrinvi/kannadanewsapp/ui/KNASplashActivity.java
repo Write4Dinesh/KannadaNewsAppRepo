@@ -30,7 +30,7 @@ public class KNASplashActivity extends AppCompatActivity {
                 launchHomeScreen();
             }
         }, LOAD_ANIMATION_DELAY_IN_MILLIS);
-        MobileAds.initialize(this, "ca-app-pub-3940256099942544~3347511713");
+        MobileAds.initialize(this, getString(R.string.admob_app_id));
     }
 
     @Override

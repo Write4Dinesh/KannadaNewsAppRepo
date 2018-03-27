@@ -2,6 +2,7 @@ package com.shrinvi.kannadanewsapp.model;
 
 import android.app.Application;
 
+import com.onesignal.OneSignal;
 import com.shrinvi.kannadanewsapp.analytics.KNAGoogleAnalytics;
 
 /**
@@ -14,6 +15,11 @@ public class KNAApplication extends Application {
         super.onCreate();
         KNAUtils.configLocale(this);
         KNAGoogleAnalytics.init(this);
+        // OneSignal Initialization
+        OneSignal.startInit(this)
+                .inFocusDisplaying(OneSignal.OSInFocusDisplayOption.Notification)
+                .unsubscribeWhenNotificationsAreDisabled(true)
+                .init();
     }
 
 }
