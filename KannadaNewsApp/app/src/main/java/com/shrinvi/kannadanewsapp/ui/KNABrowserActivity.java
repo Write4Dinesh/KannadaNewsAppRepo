@@ -14,6 +14,7 @@ import com.shrinvi.kannadanewsapp.analytics.KNAGoogleAnalytics;
 import com.shrinvi.kannadanewsapp.model.KNAConstants;
 import com.shrinvi.kannadanewsapp.model.KNAWebViewClient;
 import com.shrinvi.kannadanewsapp.R;
+import com.shrinvi.kannadanewsapp.storage.KNADataStore;
 
 public class KNABrowserActivity extends AppCompatActivity {
     private WebView mKNAWebView;
@@ -64,7 +65,6 @@ public class KNABrowserActivity extends AppCompatActivity {
         if (mKNAWebView.canGoBack()) {
             mKNAWebView.goBack();
         } else {
-            //super.onBackPressed();
             showInterstitialAd();
         }
     }
@@ -87,11 +87,13 @@ public class KNABrowserActivity extends AppCompatActivity {
     }
 
     private void showInterstitialAd() {
-        if (interstitialAd != null && interstitialAd.isLoaded()) {
-                KNAGoogleAnalytics.sendCustomEvent("AdMob", "ShowInterstitial");
+        long timeElapsedInMillis = System.currentTimeMillis() - KNADataStore.getInstance(this).getLastAddShowedTime();
+        if (interstitialAd != null && interstitialAd.isLoaded() && (timeElapsedInMillis > 60 * 1000)) {
+            KNAGoogleAnalytics.sendCustomEvent("AdMob", "ShowInterstitial");
             interstitialAd.show();
+            KNADataStore.getInstance(this).storeLastAddShowedTime(System.currentTimeMillis());
         } else {
-            KNAGoogleAnalytics.sendCustomEvent("AdMob","ShowInterstitial:not loaded yet");
+            KNAGoogleAnalytics.sendCustomEvent("AdMob", "ShowInterstitial:not loaded yet");
             finish();
 
         }
