@@ -24,7 +24,7 @@ public class KNAHomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         // KNAUtils.configLocale(this);
         AdView adView = findViewById(R.id.home_adView);
-        AdRequest adRequest = new AdRequest.Builder().addTestDevice(AdRequest.DEVICE_ID_EMULATOR).build();
+        AdRequest adRequest = new AdRequest.Builder().addTestDevice(KNAConstants.AD_TEST_DEVICE_ID).build();
         adView.loadAd(adRequest);
     }
 
