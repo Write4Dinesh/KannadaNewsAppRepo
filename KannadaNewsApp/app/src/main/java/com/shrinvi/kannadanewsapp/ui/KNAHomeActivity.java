@@ -1,6 +1,5 @@
 package com.shrinvi.kannadanewsapp.ui;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AlertDialog;
@@ -8,25 +7,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-import com.onesignal.OSNotificationOpenResult;
-import com.onesignal.OneSignal;
 import com.shrinvi.kannadanewsapp.analytics.KNAGoogleAnalytics;
 import com.shrinvi.kannadanewsapp.model.DataProvider;
-import com.shrinvi.kannadanewsapp.model.KNAConstants;
 import com.shrinvi.kannadanewsapp.R;
 import com.shrinvi.kannadanewsapp.model.KNANewsPaperAdapter;
 import com.shrinvi.kannadanewsapp.model.KNAUtils;
 
-import org.json.JSONObject;
-
-public class KNAHomeActivity extends AppCompatActivity {
+public class KNAHomeActivity extends KNASuperActivity {
     private AlertDialog mAlertDialog;
 
     @Override
@@ -44,22 +37,6 @@ public class KNAHomeActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(mLayoutManager);
         KNANewsPaperAdapter adapter = new KNANewsPaperAdapter(DataProvider.getNewsPapers(this), this);
         recyclerView.setAdapter(adapter);
-    }
-
-
-    private void showErrorDialog(String errorMessage) {
-        if (mAlertDialog == null) {
-            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-            mAlertDialog = alertDialogBuilder.create();
-        }
-        mAlertDialog.setMessage(errorMessage);
-        mAlertDialog.setButton(AlertDialog.BUTTON_POSITIVE, getString(R.string.alert_button_label), new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                mAlertDialog.dismiss();
-            }
-        });
-        mAlertDialog.show();
     }
 
     @Override
@@ -82,7 +59,7 @@ public class KNAHomeActivity extends AppCompatActivity {
                 return true;
             case R.id.about:
                 KNAGoogleAnalytics.sendScreenViewEvent("About Us Screen");
-                showErrorDialog(getString(R.string.about_us));
+                KNAUtils.showDialog(this, getString(R.string.about_us), getString(R.string.alert_button_label));
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

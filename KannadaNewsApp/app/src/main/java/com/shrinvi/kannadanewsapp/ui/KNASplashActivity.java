@@ -12,13 +12,13 @@ import com.shrinvi.kannadanewsapp.analytics.KNAGoogleAnalytics;
 import com.shrinvi.kannadanewsapp.model.KNAUtils;
 import com.shrinvi.kannadanewsapp.R;
 
-public class KNASplashActivity extends AppCompatActivity {
+public class KNASplashActivity extends KNASuperActivity {
     public static final long LOAD_ANIMATION_DELAY_IN_MILLIS = 2 * 1000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
+        super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         KNAUtils.configLocale(this);

@@ -39,7 +39,11 @@ public class KNANewsPaperAdapter extends RecyclerView.Adapter<KNANewsPaperAdapte
         holder.mNameTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-             launchBrowser(currentNewsPaper.getName(),currentNewsPaper.getUrl());
+                if(KNAUtils.isConnected(mContext)) {
+                    launchBrowser(currentNewsPaper.getName(), currentNewsPaper.getUrl());
+                }else {
+                    KNAUtils.showDialog(mContext, mContext.getString(R.string.error_not_connected), mContext.getString(R.string.alert_button_label));
+                }
             }
         });
     }

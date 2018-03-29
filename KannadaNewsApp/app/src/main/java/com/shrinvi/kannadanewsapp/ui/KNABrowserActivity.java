@@ -17,7 +17,7 @@ import com.shrinvi.kannadanewsapp.model.KNAWebViewClient;
 import com.shrinvi.kannadanewsapp.R;
 import com.shrinvi.kannadanewsapp.storage.KNADataStore;
 
-public class KNABrowserActivity extends AppCompatActivity {
+public class KNABrowserActivity extends KNASuperActivity {
     private WebView mKNAWebView;
     private InterstitialAd interstitialAd;
 

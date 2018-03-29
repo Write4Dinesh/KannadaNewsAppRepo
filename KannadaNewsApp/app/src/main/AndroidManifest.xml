@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:name=".model.KNAApplication"
         android:allowBackup="true"
@@ -12,7 +13,8 @@
         android:roundIcon="@mipmap/kannada_news"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.KNASplashActivity"
+        <activity
+            android:name=".ui.KNASplashActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,7 +23,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.KNAHomeActivity" />
-        <activity android:name=".ui.KNABrowserActivity"/>
+        <activity android:name=".ui.KNABrowserActivity" />
+        <activity android:name=".ui.KNASuperActivity"/>
     </application>
 
 </manifest>

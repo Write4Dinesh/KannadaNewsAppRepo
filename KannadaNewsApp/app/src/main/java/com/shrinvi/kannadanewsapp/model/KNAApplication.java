@@ -19,8 +19,8 @@ public class KNAApplication extends Application {
         KNAGoogleAnalytics.init(this);
         // OneSignal Initialization
         OneSignal.startInit(this)
-                .inFocusDisplaying(OneSignal.OSInFocusDisplayOption.Notification).setNotificationOpenedHandler(new ExampleNotificationOpenedHandler())
-                .unsubscribeWhenNotificationsAreDisabled(true)
+                .inFocusDisplaying(OneSignal.OSInFocusDisplayOption.InAppAlert).setNotificationOpenedHandler(new ExampleNotificationOpenedHandler())
+                .unsubscribeWhenNotificationsAreDisabled(false)
                 .init();
     }
 
@@ -31,12 +31,12 @@ public class KNAApplication extends Application {
 
             try {
                 if (result != null) {
-
-                    Log.d("OneSignal", "Push:" + result.toString());
+                    //TODO: handle the push click
                 }
             } catch (Throwable t) {
                 t.printStackTrace();
             }
         }
     }
+
 }
