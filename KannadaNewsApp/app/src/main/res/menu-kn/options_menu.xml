@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/rate_the_app"
+        android:title="ಈ ಆಪ್ ಗೆ  ರೇಟಿಂಗ್ ನೀಡಿ" />
+    <item android:id="@+id/about"
+        android:title="ನಮ್ಮ ಬಗ್ಗೆ ತಿಳಿಯಿರಿ" />
+</menu>
