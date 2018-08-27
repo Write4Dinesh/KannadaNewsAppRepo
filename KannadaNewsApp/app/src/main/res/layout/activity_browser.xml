@@ -27,5 +27,5 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         ads:adSize="BANNER"
-        ads:adUnitId="@string/ad_unit_id_for_browse_banner"/>
+        ads:adUnitId="@string/test_ad_unit_id_for_browse_banner"/>
 </RelativeLayout>

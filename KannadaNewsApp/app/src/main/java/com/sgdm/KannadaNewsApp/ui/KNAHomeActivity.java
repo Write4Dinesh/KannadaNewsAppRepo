@@ -9,9 +9,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-/*
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;*/
+import com.google.android.gms.ads.AdView;
 import com.sgdm.KannadaNewsApp.R;
 import com.sgdm.KannadaNewsApp.analytics.KNAGoogleAnalytics;
 import com.sgdm.KannadaNewsApp.model.DataProvider;
@@ -26,9 +25,9 @@ public class KNAHomeActivity extends KNASuperActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         KNAUtils.configLocale(this);
-       /* AdView adView = findViewById(R.id.home_adView);
+        AdView adView = findViewById(R.id.home_adView);
         AdRequest adRequest = new AdRequest.Builder().build();
-        adView.loadAd(adRequest);*/
+        adView.loadAd(adRequest);
 
         RecyclerView recyclerView = findViewById(R.id.np_recycler);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this);

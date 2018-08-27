@@ -11,7 +11,7 @@ import com.google.android.gms.analytics.Tracker;
  */
 
 public class KNAGoogleAnalytics {
-    private static final String GA_TRACKER_ID = "UA-116368779-1";
+    private static final String GA_TRACKER_ID = "UA-124589442-1";
     private static Tracker mTracker;
 
 

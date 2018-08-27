@@ -29,7 +29,7 @@ public class KNASplashActivity extends KNASuperActivity {
                 launchHomeScreen();
             }
         }, LOAD_ANIMATION_DELAY_IN_MILLIS);
-        //MobileAds.initialize(this, getString(R.string.admob_app_id));
+        MobileAds.initialize(this, getString(R.string.admob_app_id));
     }
 
     @Override

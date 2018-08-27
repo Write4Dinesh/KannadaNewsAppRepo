@@ -47,17 +47,18 @@
     <string name="oi_url">https://kannada.oneindia.com/</string>;
     <string name="vvn_url">https://www.vishwavani.news/</string>;
 
-    <!--admob related for test-->
+    <!--sample add unit for banner-->
     <string name="test_ad_unit_id_for_home_banner">ca-app-pub-3940256099942544/6300978111</string>
     <string name="test_ad_unit_id_for_browse_banner">ca-app-pub-3940256099942544/6300978111</string>
+    <!--sample add unit for interstitial-->
     <string name="test_ad_unit_id_for_browse_interstitial">ca-app-pub-3940256099942544/1033173712</string>
 
     <!--admob related for prod-->
-    <string name="ad_unit_id_for_home_banner">ca-app-pub-1188356255077818/5224405470</string>
-    <string name="ad_unit_id_for_browse_banner">ca-app-pub-1188356255077818/4251424522</string>
-    <string name="ad_unit_id_for_browse_interstitial">ca-app-pub-1188356255077818/3590284824</string>
+    <string name="ad_unit_id_for_home_banner">ca-app-pub-4540069239014337/6997366770</string>
+    <string name="ad_unit_id_for_browse_banner">ca-app-pub-4540069239014337/7043283011</string>
+    <string name="ad_unit_id_for_browse_interstitial">ca-app-pub-4540069239014337/9447861174</string>
 
-    <string name="admob_app_id">ca-app-pub-1188356255077818~4338699212</string>
+    <string name="admob_app_id">ca-app-pub-4540069239014337~1307654886</string>
 
 
     <string name="about_us">We are a team of freelance Mobile Apps developers based out in Bangalore , India. For Android, iOS Apps development, please write back to us at sgdmgroup@gmail.com</string>
