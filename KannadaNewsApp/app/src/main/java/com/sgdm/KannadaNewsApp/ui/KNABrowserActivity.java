@@ -1,6 +1,7 @@
 package com.sgdm.KannadaNewsApp.ui;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.webkit.WebView;
 import android.widget.ProgressBar;
 
@@ -49,14 +50,14 @@ public class KNABrowserActivity extends KNASuperActivity {
     private void initInterstitialAd() {
         // Create the InterstitialAd and set the adUnitId.
         interstitialAd = new InterstitialAd(this);
-        interstitialAd.setAdUnitId(getString(R.string.test_ad_unit_id_for_browse_interstitial));
+        interstitialAd.setAdUnitId(getString(R.string.ad_unit_id_for_browse_interstitial));
         interstitialAd.setAdListener(new AdListener() {
             @Override
             public void onAdClosed() {
                 finish();//close browser activity
             }
         });
-        AdRequest adRequest = new AdRequest.Builder().build();
+        AdRequest adRequest = getAdRequest();
         interstitialAd.loadAd(adRequest);
     }
 
@@ -77,10 +78,18 @@ public class KNABrowserActivity extends KNASuperActivity {
 
     private void initBannerAd() {
         AdView adView = findViewById(R.id.browser_adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
+        AdRequest adRequest = getAdRequest();
         adView.loadAd(adRequest);
     }
 
+    private AdRequest getAdRequest(){
+        AdRequest request = new AdRequest.Builder().addTestDevice(getString(R.string.my_galaxy_j7_device_id)).build();
+        if(request.isTestDevice(this)){
+            Log.d("KNApp","Its a Test Device");
+        }
+        return  request;
+
+    }
     private void showInterstitialAd() {
         long timeElapsedInMillis = System.currentTimeMillis() - KNADataStore.getInstance(this).getLastAddShowedTime();
         if (interstitialAd != null && interstitialAd.isLoaded() && (timeElapsedInMillis > 60 * 1000)) {

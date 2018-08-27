@@ -6,6 +6,7 @@ import android.support.v7.app.AlertDialog;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -26,7 +27,7 @@ public class KNAHomeActivity extends KNASuperActivity {
         setContentView(R.layout.activity_home);
         KNAUtils.configLocale(this);
         AdView adView = findViewById(R.id.home_adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
+        AdRequest adRequest = getAdRequest();
         adView.loadAd(adRequest);
 
         RecyclerView recyclerView = findViewById(R.id.np_recycler);
@@ -72,5 +73,12 @@ public class KNAHomeActivity extends KNASuperActivity {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
         }
     }
+    private AdRequest getAdRequest(){
+        AdRequest request = new AdRequest.Builder().addTestDevice(getString(R.string.my_galaxy_j7_device_id)).build();
+        if(request.isTestDevice(this)){
+            Log.d("KNApp","Its a Test Device");
+        }
+        return  request;
 
+    }
 }
