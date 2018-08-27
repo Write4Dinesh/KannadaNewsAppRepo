@@ -1,40 +1,39 @@
 {
   "project_info": {
-    "project_number": "131566813293",
-    "project_id": "firebase-kannada-news-app"
+    "project_number": "133368912808",
+    "firebase_url": "https://kannadanewsapp.firebaseio.com",
+    "project_id": "kannadanewsapp",
+    "storage_bucket": "kannadanewsapp.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:131566813293:android:d6e192556880879f",
+        "mobilesdk_app_id": "1:133368912808:android:4f583c983ca873fb",
         "android_client_info": {
           "package_name": "com.sgdm.KannadaNewsApp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "131566813293-omrmap74rotf74lssjmjpsts1b1fjltd.apps.googleusercontent.com",
+          "client_id": "133368912808-r9v6unkoihmb9ec3ibmn8g9d982ouj4p.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCHdHZ66xygZeUsQ6SM7q2nfuZgokWCT9A"
+          "current_key": "AIzaSyCqT1cr_6infyGzhvCbwPZ_I25K_pRgH0g"
         }
       ],
       "services": {
         "analytics_service": {
-          "status": 2,
-          "analytics_property": {
-            "tracking_id": "UA-116368779-1"
-          }
+          "status": 1
         },
         "appinvite_service": {
           "status": 1,
           "other_platform_oauth_client": []
         },
         "ads_service": {
-          "status": 1
+          "status": 2
         }
       }
     }
