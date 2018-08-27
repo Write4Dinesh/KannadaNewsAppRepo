@@ -1,8 +1,8 @@
-package com.shrinvi.kannadanewsapp.model;
+package com.sgdm.KannadaNewsApp.model;
 
 import android.content.Context;
 
-import com.shrinvi.kannadanewsapp.R;
+import com.sgdm.KannadaNewsApp.R;
 
 import java.util.ArrayList;
 import java.util.List;

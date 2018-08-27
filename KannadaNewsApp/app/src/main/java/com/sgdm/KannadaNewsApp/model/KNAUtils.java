@@ -1,4 +1,4 @@
-package com.shrinvi.kannadanewsapp.model;
+package com.sgdm.KannadaNewsApp.model;
 
 import android.content.Context;
 import android.content.DialogInterface;

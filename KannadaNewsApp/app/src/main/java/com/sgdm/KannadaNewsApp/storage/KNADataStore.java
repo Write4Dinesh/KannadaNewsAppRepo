@@ -1,4 +1,4 @@
-package com.shrinvi.kannadanewsapp.storage;
+package com.sgdm.KannadaNewsApp.storage;
 
 import android.content.Context;
 import android.content.SharedPreferences;

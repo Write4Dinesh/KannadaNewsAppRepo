@@ -1,23 +1,22 @@
-package com.shrinvi.kannadanewsapp.ui;
+package com.sgdm.KannadaNewsApp.ui;
 
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-
+/*
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.shrinvi.kannadanewsapp.analytics.KNAGoogleAnalytics;
-import com.shrinvi.kannadanewsapp.model.DataProvider;
-import com.shrinvi.kannadanewsapp.R;
-import com.shrinvi.kannadanewsapp.model.KNANewsPaperAdapter;
-import com.shrinvi.kannadanewsapp.model.KNAUtils;
+import com.google.android.gms.ads.AdView;*/
+import com.sgdm.KannadaNewsApp.R;
+import com.sgdm.KannadaNewsApp.analytics.KNAGoogleAnalytics;
+import com.sgdm.KannadaNewsApp.model.DataProvider;
+import com.sgdm.KannadaNewsApp.model.KNANewsPaperAdapter;
+import com.sgdm.KannadaNewsApp.model.KNAUtils;
 
 public class KNAHomeActivity extends KNASuperActivity {
     private AlertDialog mAlertDialog;
@@ -27,9 +26,9 @@ public class KNAHomeActivity extends KNASuperActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         KNAUtils.configLocale(this);
-        AdView adView = findViewById(R.id.home_adView);
+       /* AdView adView = findViewById(R.id.home_adView);
         AdRequest adRequest = new AdRequest.Builder().build();
-        adView.loadAd(adRequest);
+        adView.loadAd(adRequest);*/
 
         RecyclerView recyclerView = findViewById(R.id.np_recycler);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this);

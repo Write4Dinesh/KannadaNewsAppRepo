@@ -1,4 +1,4 @@
-package com.shrinvi.kannadanewsapp.analytics;
+package com.sgdm.KannadaNewsApp.analytics;
 
 /**
  * Created by shrinvigroup on 25/03/2018.

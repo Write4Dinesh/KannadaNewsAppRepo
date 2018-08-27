@@ -1,4 +1,4 @@
-package com.shrinvi.kannadanewsapp.model;
+package com.sgdm.KannadaNewsApp.model;
 
 import android.content.Context;
 import android.content.Intent;
@@ -8,10 +8,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.shrinvi.kannadanewsapp.R;
-import com.shrinvi.kannadanewsapp.analytics.KNAGAEventsData;
-import com.shrinvi.kannadanewsapp.analytics.KNAGoogleAnalytics;
-import com.shrinvi.kannadanewsapp.ui.KNABrowserActivity;
+import com.sgdm.KannadaNewsApp.R;
+import com.sgdm.KannadaNewsApp.analytics.KNAGAEventsData;
+import com.sgdm.KannadaNewsApp.analytics.KNAGoogleAnalytics;
+import com.sgdm.KannadaNewsApp.ui.KNABrowserActivity;
 
 import java.util.List;
 

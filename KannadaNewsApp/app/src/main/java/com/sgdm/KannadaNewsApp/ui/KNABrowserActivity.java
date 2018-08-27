@@ -1,25 +1,23 @@
-package com.shrinvi.kannadanewsapp.ui;
+package com.sgdm.KannadaNewsApp.ui;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.webkit.WebView;
 import android.widget.ProgressBar;
 
-import com.google.android.gms.ads.AdListener;
+/*import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.InterstitialAd;
-import com.shrinvi.kannadanewsapp.AppConfig;
-import com.shrinvi.kannadanewsapp.analytics.KNAGoogleAnalytics;
-import com.shrinvi.kannadanewsapp.model.KNAConstants;
-import com.shrinvi.kannadanewsapp.model.KNAUtils;
-import com.shrinvi.kannadanewsapp.model.KNAWebViewClient;
-import com.shrinvi.kannadanewsapp.R;
-import com.shrinvi.kannadanewsapp.storage.KNADataStore;
+import com.google.android.gms.ads.InterstitialAd;*/
+import com.sgdm.KannadaNewsApp.R;
+import com.sgdm.KannadaNewsApp.analytics.KNAGoogleAnalytics;
+import com.sgdm.KannadaNewsApp.model.KNAConstants;
+import com.sgdm.KannadaNewsApp.model.KNAUtils;
+import com.sgdm.KannadaNewsApp.model.KNAWebViewClient;
+import com.sgdm.KannadaNewsApp.storage.KNADataStore;
 
 public class KNABrowserActivity extends KNASuperActivity {
     private WebView mKNAWebView;
-    private InterstitialAd interstitialAd;
+   // private InterstitialAd interstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +48,7 @@ public class KNABrowserActivity extends KNASuperActivity {
 
     private void initInterstitialAd() {
         // Create the InterstitialAd and set the adUnitId.
-        interstitialAd = new InterstitialAd(this);
+        /*interstitialAd = new InterstitialAd(this);
         interstitialAd.setAdUnitId(getString(R.string.ad_unit_id_for_browse_interstitial));
         interstitialAd.setAdListener(new AdListener() {
             @Override
@@ -59,7 +57,7 @@ public class KNABrowserActivity extends KNASuperActivity {
             }
         });
         AdRequest adRequest = new AdRequest.Builder().build();
-        interstitialAd.loadAd(adRequest);
+        interstitialAd.loadAd(adRequest);*/
     }
 
     @Override
@@ -78,13 +76,13 @@ public class KNABrowserActivity extends KNASuperActivity {
     }
 
     private void initBannerAd() {
-        AdView adView = findViewById(R.id.browser_adView);
+       /* AdView adView = findViewById(R.id.browser_adView);
         AdRequest adRequest = new AdRequest.Builder().build();
-        adView.loadAd(adRequest);
+        adView.loadAd(adRequest);*/
     }
 
     private void showInterstitialAd() {
-        long timeElapsedInMillis = System.currentTimeMillis() - KNADataStore.getInstance(this).getLastAddShowedTime();
+        /*long timeElapsedInMillis = System.currentTimeMillis() - KNADataStore.getInstance(this).getLastAddShowedTime();
         if (interstitialAd != null && interstitialAd.isLoaded() && (timeElapsedInMillis > 60 * 1000)) {
             KNAGoogleAnalytics.sendCustomEvent("AdMob", "ShowInterstitial");
             interstitialAd.show();
@@ -93,6 +91,6 @@ public class KNABrowserActivity extends KNASuperActivity {
             KNAGoogleAnalytics.sendCustomEvent("AdMob", "ShowInterstitial:not loaded yet");
             finish();
 
-        }
+        }*/
     }
 }

@@ -1,11 +1,10 @@
-package com.shrinvi.kannadanewsapp.model;
+package com.sgdm.KannadaNewsApp.model;
 
 import android.app.Application;
-import android.util.Log;
 
 import com.onesignal.OSNotificationOpenResult;
 import com.onesignal.OneSignal;
-import com.shrinvi.kannadanewsapp.analytics.KNAGoogleAnalytics;
+import com.sgdm.KannadaNewsApp.analytics.KNAGoogleAnalytics;
 
 /**
  * Created by shrinvigroup on 25/03/2018.

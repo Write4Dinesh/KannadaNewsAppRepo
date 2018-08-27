@@ -1,16 +1,15 @@
-package com.shrinvi.kannadanewsapp.ui;
+package com.sgdm.KannadaNewsApp.ui;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
 
 import com.google.android.gms.ads.MobileAds;
-import com.shrinvi.kannadanewsapp.analytics.KNAGoogleAnalytics;
-import com.shrinvi.kannadanewsapp.model.KNAUtils;
-import com.shrinvi.kannadanewsapp.R;
+import com.sgdm.KannadaNewsApp.R;
+import com.sgdm.KannadaNewsApp.analytics.KNAGoogleAnalytics;
+import com.sgdm.KannadaNewsApp.model.KNAUtils;
 
 public class KNASplashActivity extends KNASuperActivity {
     public static final long LOAD_ANIMATION_DELAY_IN_MILLIS = 2 * 1000;
@@ -30,7 +29,7 @@ public class KNASplashActivity extends KNASuperActivity {
                 launchHomeScreen();
             }
         }, LOAD_ANIMATION_DELAY_IN_MILLIS);
-        MobileAds.initialize(this, getString(R.string.admob_app_id));
+        //MobileAds.initialize(this, getString(R.string.admob_app_id));
     }
 
     @Override

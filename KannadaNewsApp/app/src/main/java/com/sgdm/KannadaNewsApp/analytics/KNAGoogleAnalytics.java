@@ -1,4 +1,4 @@
-package com.shrinvi.kannadanewsapp.analytics;
+package com.sgdm.KannadaNewsApp.analytics;
 
 import android.content.Context;
 
